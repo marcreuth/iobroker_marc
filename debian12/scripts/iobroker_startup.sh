@@ -158,6 +158,11 @@ if [[ -f /opt/.docker_config/.first_run ]]; then
   echo "alias maint='/opt/scripts/maintenance.sh'" >> /etc/bash.bashrc
   echo "alias m='/opt/scripts/maintenance.sh'" >> /etc/bash.bashrc
   echo "Done."
+  echo " "
+  # Start redis-server
+  echo -n "Starting redis-server... "
+  echo "redis-server" >> /etc/bash.bashrc
+  echo "Done."
 else
   echo "This is not the first run of this container. Skipping first run preparation."
 fi
